@@ -1,8 +1,8 @@
-public class Cola {
+public class Lessons42748 {
 
     public static void main(String[] args) {
-        Cola cola = new Cola();
-        cola.solution(3, 2, 20);
+        Lessons42748 lessons42748 = new Lessons42748();
+        lessons42748.solution(3, 2, 20);
     }
 
     public int solution(int a, int b, int n) {
