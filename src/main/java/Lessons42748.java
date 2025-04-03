@@ -1,13 +1,23 @@
-public class Lessons42748 {
-    public int solution(int a, int b, int n) {
-        int answer = 0;
-        int empty = n;
-        int full = 0;
+import java.util.Arrays;
 
-        while (empty >= a) {
-            full = empty / a * b;
-            empty = empty % a + full;
-            answer += full;
+public class Lessons42748 {
+    public int[] solution(int[] array, int[][] commands) {
+        int[] answer = new int[commands.length];
+
+        for (int i = 0; i < commands.length; i++) {
+            int a = commands[i][0];
+            int b = commands[i][1];
+            int c = commands[i][2];
+            int[] arr = new int[b - a + 1];
+            for (int j = 0; j < arr.length; j++) {
+                arr[j] = array[b-j-1];
+            }
+            Arrays.sort(arr);
+            answer[i] = arr[c-1];
+        }
+
+        for (int num: answer) {
+            System.out.println(num);
         }
         return answer;
     }
