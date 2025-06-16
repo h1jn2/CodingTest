@@ -8,11 +8,11 @@ fun main() {
 
     repeat(n) {
         val orderList = readln().split(" ")
-        val order = orderList.first()
+        val order = orderList[0]
 
         when (order) {
             "push" -> {
-                val num = orderList.last().toInt()
+                val num = orderList[1].toInt()
                 stack.push(num)
             }
             "top" -> {
